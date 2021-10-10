@@ -24,7 +24,9 @@
         },
         "bundle-ios": {
           "executor": "@nrwl/react-native:bundle",
-          "outputs": ["apps/habit/build"],
+          "outputs": [
+            "apps/habit/build"
+          ],
           "options": {
             "entryFile": "apps/habit/src/main.tsx",
             "platform": "ios",
@@ -61,17 +63,29 @@
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["apps/habit/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": [
+              "apps/habit/**/*.{ts,tsx,js,jsx}"
+            ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/habit"],
+          "outputs": [
+            "coverage/apps/habit"
+          ],
           "options": {
             "jestConfig": "apps/habit/jest.config.js",
             "passWithNoTests": true
+          },
+          "configurations": {
+            "ci": {
+              "codeCoverage": true,
+              "coverageDirectory": "coverage/apps/habit"
+            }
           }
         }
       }
@@ -127,9 +141,13 @@
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["apps/habit-e2e/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": [
+              "apps/habit-e2e/**/*.{ts,tsx,js,jsx}"
+            ]
           }
         }
       }
