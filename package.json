@@ -3,8 +3,11 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx serve",
+    "android": "nx run-android",
     "build": "nx build",
+    "ios": "nx run-ios",
+    "lint": "nx lint",
+    "start": "nx serve",
     "test": "nx test"
   },
   "private": true,
