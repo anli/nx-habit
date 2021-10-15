@@ -98,3 +98,5 @@ node_modules/
 apps/habit-e2e/artifacts
 
 **/coverage
+
+apps/habit/node_modules
