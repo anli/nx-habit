@@ -1,10 +1,9 @@
-import 'react-native';
-import React from 'react';
 import { render } from '@testing-library/react-native';
+import React from 'react';
+import 'react-native';
+import { App } from './app';
 
-import App from './App';
-
-it('renders correctly', () => {
+it('renders correctly', async () => {
   const { getByTestId } = render(<App />);
   expect(getByTestId('heading')).toHaveTextContent('Welcome');
 });

@@ -9,6 +9,9 @@ module.exports = {
       'react-native/jest/assetFileTransformer.js'
     ),
   },
+  transformIgnorePatterns: [
+    'node_modules/(?!(jest-)?@?react-native|@react-native-community|@react-navigation)',
+  ],
   coverageThreshold: {
     global: {
       branches: 100,
